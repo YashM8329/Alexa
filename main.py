@@ -71,7 +71,7 @@ def task(command):
 
 # Main loop
 while True:
-    print("Press V to use voice command, T to type your command, W to whatsapp your msg:")
+    print("Press V to use voice command, T to type your command, W to whatsapp your msg, Q to exit:")
     choice = input().strip().upper()
     if choice == 'V':
         command = listen()
@@ -79,6 +79,8 @@ while True:
         command = get_text_input()
     elif choice == 'W':
         command = whatsapp()
+    elif choice == 'Q':
+        break
     else:
         print("Invalid choice. Try again.")
         continue
